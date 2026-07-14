@@ -34,8 +34,8 @@ week            = (weeksSinceEpoch % weeksPerSprint) + 1
 
 ## Icon & screenshot assets
 
-The asset set under `src\Assets\` is **generated** by `tools\make_icons.py`
-(a checkered "sprint" finish-flag badge on an Azure-blue → teal gradient):
+The asset set under `src\Assets\` (a checkered "sprint" finish-flag badge on an
+Azure-blue → teal gradient):
 
 | Asset | Size | Used for |
 | ----- | ---- | -------- |
@@ -49,13 +49,7 @@ The asset set under `src\Assets\` is **generated** by `tools\make_icons.py`
 | `WhatSprintIsItWidget.png` | 256×256 | Master badge |
 | `WhatSprintIsItWidget.ico` | 16–256 | General app icon |
 
-Regenerate them any time with:
-
-```powershell
-py tools\make_icons.py   # requires Pillow: py -m pip install pillow
-```
-
-The generator also emits the **scale-qualified** variants MSIX packaging expects
+The set includes the **scale-qualified** variants MSIX packaging expects
 (`*.scale-100/125/150/200/400.png`) plus target-size app-list icons
 (`Square44x44Logo.targetsize-16/24/32/48/256.png` and `.altform-unplated`), so a
 plain `dotnet build` / VS **Deploy** won't fail on missing scaled assets.
