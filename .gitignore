@@ -1,0 +1,34 @@
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+
+# NuGet
+*.nupkg
+packages/
+
+# MSIX / AppX packaging outputs
+*.msix
+*.msixbundle
+*.appx
+*.appxbundle
+*.appxupload
+AppPackages/
+BundleArtifacts/
+*.pfx
+*.cer
+
+# Python bytecode (tools/make_icons.py)
+__pycache__/
+*.pyc
+
+# Local logs
+*.log
+
+# OS / editor
+.vs/
+.vscode/
+Thumbs.db
+desktop.ini
